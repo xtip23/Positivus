@@ -6,10 +6,6 @@
   font-family: 'Space Grotesk';
 }
 
-body{
-
-}
-
 .hide{
   display: none !important;
 }
@@ -85,11 +81,11 @@ body{
   color: #B9FF66;
 }
 
-/*Smart phone nhỏ*/
+
 @media screen and (min-width: 240px){
 
 }
-/*Iphone(480 x 640)*/
+
 @media screen and (min-width: 320px){
   .mobile{
     display: unset;
@@ -193,14 +189,6 @@ body{
     padding: 0 20px;
   }
 
-  .heading-desc h1{
-    
-  }
-
-  .heading-desc img{
-    padding: auto;
-  }
-
   .heading-desc button{
     width: 100%;
   }
@@ -227,9 +215,15 @@ body{
     margin-top: 60px;
   }
 
+  .heading-logo-line{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .heading-logo-line img{
     height: 48px;
-    margin: 0 10px;
   }
 
   .services-section, .case-studies-section, .working-process-section, .team-section, .testimonials-section, .contact-section{
@@ -262,8 +256,8 @@ body{
     border: 1px solid #191A23;
     box-shadow: 0px 5px 0px 0px #191A23;
     padding: 50px;
-    margin: 0 0 30px;
     position: relative;
+    margin-bottom: 30px;
   }
 
   .service-card-footer{
@@ -298,7 +292,13 @@ body{
 
   .list-case-studies{
     display: flex;
-    overflow: hidden;
+    overflow: auto;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .list-case-studies::-webkit-scrollbar { 
+    display: none; 
   }
 
   .case-studies-card{
@@ -318,6 +318,11 @@ body{
 
   .case-studies-link img{
     padding-left: 15px;
+  }
+
+  .working-process-header{
+    display: flex;
+    flex-flow: column;
   }
   
   .working-process-card{
@@ -398,13 +403,25 @@ body{
     width: 100%;
   }
 
-  .team-section .heading-button, .contact-section .heading-button{
- 
+  .list-testimonials{
+    display: flex;
+    overflow: auto;
+    gap: 50px;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
   }
 
   .list-testimonials-container{
     border-radius: 45px;
     padding: 30px;
+  }
+
+  .list-testimonials::-webkit-scrollbar { 
+    display: none; 
+  }
+
+  .testimonials-card{
+    min-width: fit-content;
   }
 
   .testimonials-box{
@@ -642,16 +659,16 @@ body{
   }
 
 }
-/*Tablet nhỏ(480 x 640)*/
+
 @media screen and (min-width: 480px){
 
 }
-/*Ipad dọc(768 x 1024)*/
+
 @media screen and (min-width: 768px){
 
 }
-/*Ipad ngang(1024 x 768)*/
-@media screen and (min-width: 1024px){
+
+@media screen and (min-width: 1350px){
   .mobile{
     display: none;
   }
@@ -765,11 +782,6 @@ body{
     padding: unset;
   }
 
-  .heading-desc h1{
-    /* padding: 0 100px;
-    min-width: 50%; */
-  }
-
   .heading-img{
     width: fit-content;
     float: right;
@@ -781,28 +793,9 @@ body{
     margin: unset;
   }
 
-  .heading-descript{
-    /* padding: 0 10px;
-    margin-top: 20px; */
-  }
-
-  .heading-descript p {
-    /* padding: 0 10px;
-    font-size: 16px; */
-  }
-
   .heading-logo-line{
     clear: both;
-    display: flex;
-    justify-content: center;
-  }
-
-  .heading-logo-line img:last-child{
-    margin: 0;
-  }
-
-  .heading-logo-line img{
-    margin: 0 90px 0 0;
+    gap: 90px;
   }
 
   .services-section, .case-studies-section, .working-process-section, .team-section, .testimonials-section, .contact-section{
@@ -833,7 +826,7 @@ body{
   }
 
   .working-process-header{
-    display: flex;
+    flex-flow: unset;
   }
 
   .working-process-header p{
@@ -866,16 +859,13 @@ body{
   .list-services{
     display: flex;
     flex-wrap: wrap;
+    gap: 40px;
   }
 
   .service-card {
-    min-width: calc(50% - 40px);
+    min-width: calc(50% - 20px);
     display: flex;
-    margin: 0 40px 40px 0;
-  }
-
-  .service-card:nth-child(5), .service-card:nth-child(6) {
-    margin-bottom: 0;
+    margin-bottom: 0px;
   }
 
   .service-card-footer{
@@ -942,11 +932,6 @@ body{
     border-radius: 45px;
     padding: 42px 0;
     background-color: #191A23;
-  }
-
-  .list-case-studies{
-    display: flex;
-    overflow: hidden;
   }
 
   .case-studies-card{
@@ -1028,12 +1013,10 @@ body{
   /* testimonials box */
   .list-testimonials{
     display: flex;
-    overflow: hidden;
   }
   
   .testimonials-card{
     min-width: calc(50% - 25px);
-    margin-right: 50px;
   }
 
   .testimonials-pagination-container{
